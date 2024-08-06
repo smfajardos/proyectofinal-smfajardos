@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+</head>
+<body>
+    <h1>Estos son los productos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Vaso</th>
+                <th>Volumen</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for productos in productos%}
+            <tr>
+                <td>{{productos.id}}</td>
+                <td>{{productos.nombre}}</td>
+                <td>{{productos.precio_publico}}</td>
+                <td>{{productos.vaso}}</td>
+                <td>{{productos.volumen}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

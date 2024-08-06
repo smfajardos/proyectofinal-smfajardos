@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos e Ingredientes</title>
+</head>
+<body>
+    <h1>Estos son los productos con sus ingredientes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Id Producto</th>
+                <th>Producto</th>
+                <th>Ingrediente</th>            
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items%}
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.producto.id}}</td>
+                <td>{{item.producto.nombre}}</td>
+                <td>{{item.ingrediente.nombre}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

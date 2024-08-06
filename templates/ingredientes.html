@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredientes</title>
+</head>
+<body>
+    <h1>Estos son los productos con sus ingredientes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Calorias</th>
+                <th>Vegetariano</th>
+                <th>Inventario</th>
+                <th>Sabor</th>       
+            </tr>
+        </thead>
+        <tbody>
+            {% for ingredientes in ingredientes%}
+            <tr>
+                <td>{{ingredientes.id}}</td>
+                <td>{{ingredientes.nombre}}</td>
+                <td>{{ingredientes.precio}}</td>
+                <td>{{ingredientes.calorias}}</td>
+                <td>{{ingredientes.es_vegetariano}}</td>
+                <td>{{ingredientes.inventario}}</td>
+                <td>{{ingredientes.sabor}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
